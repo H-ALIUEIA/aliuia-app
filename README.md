@@ -58,12 +58,10 @@
 - Λειτουργία Εκτός Σύνδεσης
 
 <div align="center">
+  <h1>Κατέβασε το από</h1>
+  <a href="https://github.com/h-aliueia/aliuia-app/releases"><img src="https://raw.githubusercontent.com/NeoApplications/Neo-Backup/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" width="200"></a>
   <br>
   <br>
   <a href="https://github.com/h-aliueia/aliuia-app/releases"><img src="https://img.shields.io/github/v/release/h-aliueia/aliuia-app"></a>
   <a href="https://github.com/h-aliueia/aliuia-app/releases"><img src="https://img.shields.io/github/downloads/h-aliueia/aliuia-app/total"></a>
-  <br>
-  <br>
-  <h4>Κατέβασε το από</h4>
-  <a href="https://github.com/h-aliueia/aliuia-app/releases"><img src="https://raw.githubusercontent.com/NeoApplications/Neo-Backup/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" width="200"></a> 
 </div>
