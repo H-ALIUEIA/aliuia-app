@@ -1,5 +1,5 @@
 
-![Uploading channels4_profile2.jpg…]()
+![channels4_profile2](https://github.com/user-attachments/assets/4b34ad34-8068-4371-b597-71180eca578c)
 
 Έχετε βαρεθεί με της ειδήσεις και τα Social Media
 Δεν ξέρετε πλέον τι είναι προπαγάνδα και τη αλήθεια?
