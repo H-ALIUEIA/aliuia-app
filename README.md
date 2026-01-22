@@ -46,7 +46,14 @@
 Τι περιμένετε?<br>
 
 ## Φωτογραφίες
-
+<p align="center">
+<img width="200" alt="image1" src="https://github.com/user-attachments/assets/9fe48d38-e5d2-42a7-9f18-dcaa82a5658a" />
+<img width="200" alt="image2" src="https://github.com/user-attachments/assets/1fc5ce44-2eab-44a7-b930-accc3f0e883f" />
+<img width="200" alt="image3" src="https://github.com/user-attachments/assets/c5b8da1d-04f4-413f-b43c-126f3df756f7" />
+<img width="200" alt="image4" src="https://github.com/user-attachments/assets/4679afc3-ed38-4c3b-befc-154e14daf1d7" />
+<img width="200" alt="image5" src="https://github.com/user-attachments/assets/84ffdb05-4ddf-42be-a8e0-d6d1455559cc" />
+<img width="200" alt="image6" src="https://github.com/user-attachments/assets/667b9956-e822-414e-986a-5e843f9efc15" />
+</p>
 
 ## Λειτουργίες
 - Ειδήσεις
