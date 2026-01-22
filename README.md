@@ -1,4 +1,4 @@
-<center><img width="600" height="600" alt="channels4_profile" src="https://github.com/user-attachments/assets/ca290409-4bdd-4dca-9f79-72cf81517c93" /></center>
+<center><img width="300" height="300" alt="channels4_profile" src="https://github.com/user-attachments/assets/ca290409-4bdd-4dca-9f79-72cf81517c93" /></center>
 
 
 Έχετε βαρεθεί με της ειδήσεις και τα Social Media
