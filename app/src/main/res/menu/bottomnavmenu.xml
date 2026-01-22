@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Άρθρα"
+        android:id="@+id/news"
+        android:icon="@drawable/baseline_newspaper_24"/>
+    <item
+        android:title="Αποσπάσματα"
+        android:id="@+id/quotes"
+        android:icon="@drawable/baseline_abc_24"/>
+
+    <item
+        android:title=""
+        android:id="@+id/placeholder"/>
+
+    <item
+        android:title="Shorts"
+        android:id="@+id/shorts"
+        android:icon="@drawable/filmshorts"/>
+    <item
+        android:title="Μαθήματα"
+        android:id="@+id/lvideos"
+        android:icon="@drawable/baseline_menu_book_24"/>
+</menu>

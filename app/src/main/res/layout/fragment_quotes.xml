@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.h_aliueia.QuotesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginBottom="15dp"
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Παρακαλώ Περιμένετε..."
+                android:textColor="#FFFFFF" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#ffffff"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/description"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Παρακαλώ Περιμένετε..."
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background=" #00FFFFFF"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/searchbutton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/outline_bookmark_heart_24"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:padding="6dp"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:id="@+id/categories"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="6"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:layout_marginRight="10dp"
+                android:id="@+id/sourcebutton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/source"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:padding="6dp"
+                android:background="#00FFFFFF"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

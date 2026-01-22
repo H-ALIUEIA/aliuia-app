@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LiquidBallProgressBar">
+        <attr name="lbpb_textColor" format="color|reference"/>
+        <attr name="lbpb_waveColor" format="color|reference"/>
+        <attr name="lbpb_textOverlapColor" format="color|reference"/>
+        <attr name="lbpb_borderColor" format="color|reference"/>
+        <attr name="lbpb_unfilledColor" format="color|reference"/>
+        <attr name="lbpb_textSize" format="dimension"/>
+        <attr name="lbpb_borderWidth" format="dimension"/>
+        <attr name="lbpb_progress" format="integer"/>
+        <attr name="lbpb_maxProgress" format="integer"/>
+
+    </declare-styleable>
+
+
+
+
+</resources>

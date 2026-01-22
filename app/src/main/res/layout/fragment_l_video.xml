@@ -1,0 +1,2221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:visibility="gone"
+        tools:context="io.github.h_aliueia.LVideoFragment">
+
+        <ScrollView
+            android:id="@+id/prophecyscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/scrollayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Πρώτη ημέρα"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:tag="lesson-1-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day1_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Εισαγωγη"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/secondsandthirdlayout"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:tag="lesson-1-2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingRight="50dp"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day1_2"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Προτεστάντες"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-1-3"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="50dp"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day1_3"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Μάρτυρες\nτου Ιεχωβά"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-1-4"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day1_4"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Αντβεντιστές της Εβδόμης Ημέρας"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-1-5"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day1_5"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Πρώτη Εκκλησία"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-1-6"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day1_6"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Πως θα διαβάζουμε το κείμενο"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Δεύτερη ημέρα"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:tag="lesson-2-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="2 Σπίτια του Ισραήλ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_2"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ρουβήν"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-3"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_3"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ιωσήφ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-4"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_4"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Εφραίμ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-5"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_5"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Μανασσή"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/twelveandthreeteen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                <LinearLayout
+                    android:paddingRight="50dp"
+                    android:tag="lesson-2-6"
+                    android:onClick="startvideo"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_6"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ιούδας"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingLeft="50dp"
+                    android:tag="lesson-2-7"
+                    android:onClick="startvideo"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_7"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Δαν"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fourteenandfifteen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                <LinearLayout
+                    android:tag="lesson-2-8"
+                    android:paddingRight="50dp"
+                    android:onClick="startvideo"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_8"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Συμεών-Λευί"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingLeft="50dp"
+                    android:tag="lesson-2-9"
+                    android:onClick="startvideo"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_9"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ζαβουλών"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-10"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_10"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+                    <TextView
+                        android:text="Ισσάχαρ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-11"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_11"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Γαδ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-12"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_12"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ασήρ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-13"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_13"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Νεφθαλί"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-14"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_14"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Βενιαμίν"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-15"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_15"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Κρίση στις\n12 Φυλές"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-2-16"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day2_16"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Τα αρχαία κείμενα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Τρίτη ημέρα"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:tag="lesson-3-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day3_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Τι Εννοεί ο Δανιήλ με 'Εβδομάδες'?"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-3-2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day3_2"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Τι είπαμε ως τώρα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-3-3"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day3_3"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Πρώτος Μάρτυρας"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-3-4"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day3_4"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ανάλυση του πρώτου μάρτυρα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-3-5"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day3_5"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Δεύτερος Μάρτυρας"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-3-6"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day3_6"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Συνήθεις Αντίρρηση"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-3-7"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day3_7"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Προφητείες για την τελευταία εβδομάδα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Τέταρτη ημέρα"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:tag="lesson-4-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day4_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Προφητεία για Μοντέρνα Τεχνολογία"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Πέμπτη ημέρα"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:tag="lesson-5-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day5_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Κάτι εμφανίστηκε στην Αμερική"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-5-2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day5_2"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Το Σημάδι του Ιωνά"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-5-3"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day5_3"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Τι γίνεται τώρα στην Αμερική"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-5-4"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:onClick="startvideo"
+                    android:layout_gravity="center"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day5_4"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Μελλοντικό σημάδι του Ιωνά"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Έκτη ημέρα"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+
+                <LinearLayout
+                    android:tag="lesson-6-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day6_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Παραδόσεις"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-6-2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day6_2"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Πως λειτουργεί το βιβλιακό ημερολόγιο"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-6-3"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day6_3"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Βιβλιακές Γιορτές Νο1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-6-4"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day6_4"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Βιβλιακές Γιορτές Νο2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-6-5"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day6_5"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Άλλες Εντολές"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Έβδομη ημέρα"
+                    android:textSize="30sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#000000"/>
+
+                <LinearLayout
+                    android:tag="lesson-7-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day7_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ο Αντίχριστος"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-7-2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day7_2"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Τοποθεσία του Θυρίου"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-7-3"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day7_3"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Τοποθεσία σύμφωνα με προφήτες"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-7-4"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day7_4"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Σημάδι του σατανά"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-7-5"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day7_5"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Χωρίς Χρήματα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="lesson-7-6"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideo"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day7_6"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="Διαφορές\nΙσλάμ και Χριστιανισμού"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/menuselector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_marginBottom="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:background="@drawable/cardviewcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="5"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/prophecyicon4" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="5dp"
+                            app:autoSizeTextType="uniform"
+                            android:textColor="@color/white"
+                            app:autoSizeMinTextSize="4sp"
+                            app:autoSizeMaxTextSize="14sp"
+                            app:autoSizeStepGranularity="2sp"
+                            android:paddingRight="5dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:text="Μάθε της προφητείες της Αγίας Γραφής σε 7 ημέρες"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:gravity="center"
+                            android:layout_weight="3">
+
+
+                            <ImageView
+                                android:id="@+id/prophecydaysindicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/day1" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            app:autoSizeTextType="uniform"
+                            app:autoSizeMinTextSize="4sp"
+                            app:autoSizeMaxTextSize="12sp"
+                            app:autoSizeStepGranularity="2sp"
+                            android:text="Δες λεπτομέρειες >"/>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/card1layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00FF00"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#FAFAFA"
+                                        android:textAppearance="?attr/textAppearanceHeadline6"
+                                        android:text="Επίπεδο 1"/>
+
+                                    <TextView
+                                        android:id="@+id/zerooutof"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#FAFAFA"
+                                        android:textAppearance="?attr/textAppearanceHeadline6"
+                                        android:text="0/5"/>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:gravity="right"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_marginRight="20dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/cross"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:scrollHorizontally="false"
+                                android:background="@drawable/chip_view_selector"
+                                android:id="@+id/card1text"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:textSize="20sp"
+                                android:text="Μάθε την Αγία Γραφή"
+                                android:textColor="#00FF00" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="#0000FF"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/card3layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#0000FF"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="vertical"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ξέμαθε 101"
+                                        android:textColor="#FAFAFA"
+                                        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:gravity="right"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_marginRight="20dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/open_mind"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:scrollHorizontally="false"
+                                android:background="@drawable/chip_view_selector"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:textSize="20sp"
+                                android:text="Ξεκίνα"
+                                android:textColor="#00FF00" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/learnbiblelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="200px"
+        android:visibility="gone">
+
+        <ScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/levels"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unlearnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="200px"
+        android:visibility="gone">
+
+        <ScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/unlearnvideos"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/unlearncard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:tag="unlearn1"
+                    android:onClick="unlearn"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:background="#FFFF00"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/unlearncardlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="206dp"
+                                android:src="@drawable/evolution"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/chip_view_selector_blue"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="10dp"
+                                android:scrollHorizontally="false"
+                                android:singleLine="true"
+                                android:text="Ξεκίνα"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

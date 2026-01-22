@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.github.h_aliueia.bibleactivity">
+
+
+    <LinearLayout
+        android:id="@+id/booksholder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/bookindholder"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button80"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:onClick="previous"
+                android:text=" ⬅ " />
+
+            <TextView
+                android:id="@+id/selectbook"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:layout_weight="3"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:onClick="bookschange"
+                android:text="⬇ ΓΕΝΕΣΙΣ 1 ⬇" />
+
+            <Button
+                android:id="@+id/button81"
+                android:layout_width="0dp"
+                android:onClick="after"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text=" ➡ " />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/selectbookscroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:columnCount="3"
+                app:rowCount="22">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="γενεσις"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b1"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="εξοδος"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b2"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="λευιτικον"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b3"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="αριθμοι"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b4"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="δευτερονομιον"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b5"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιησους του ναυη"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b6"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="κριται"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b7"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ρουθ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b8"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="α' σαμουηλ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b9"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="β' σαμουηλ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b10"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="α΄ βασιλεων"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b11"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="β΄ βασιλεων"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b12"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="α' χρονικων"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b13"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="β' χρονικων"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b14"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="εσδρασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b15"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="νεεμιασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b16"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="εσθηρ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b17"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιωβ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b18"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ψαλμοι"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b19"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="παροιμιαι"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b20"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="εκκλησιαστησ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b21"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ασμα ασματων"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b22"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ησαϊασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b23"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιερεμιασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b24"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="θρηνοι"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b25"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιεζεκιηλ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b26"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="δανιηλ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b27"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ωσηε"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b28"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιωηλ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b29"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="αμωσ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b30"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="αβδιου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b31"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιωνασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b32"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="μιχαιασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b33"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ναουμ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b34"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="αββακουμ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b35"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="σοφονιασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b36"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="αγγαιοσ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b37"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ζαχαριασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b38"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="μαλαχιασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b39"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="κατα ματθαιον"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b40"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="κατα μαρκον"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b41"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="κατα λουκαν"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b42"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="κατα ιωαννην"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b43"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="πραξεισ αποστολων"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b44"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ ρωμαιουσ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b45"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ κορινθιουσ α'"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b46"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ κορινθιουσ β'"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b47"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ γαλατασ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b48"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ εφεσιουσ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b49"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ φιλιππησιουσ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b50"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ κολοσσαεισ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b51"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ θεσσαλονικεισ α'"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b52"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ θεσσαλονικεισ β'"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b53"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="α' προσ τιμοθεον"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b54"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="β' προσ τιμοθεον"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b55"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ τιτον"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b56"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ φιλημονα"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b57"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="προσ εβραιουσ"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b58"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιακωβου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b59"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="α' πετρου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b60"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="β' πετρου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b61"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="α' ιωαννου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b62"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="β' ιωαννου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b63"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="γ' ιωαννου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b64"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="ιουδα"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b65"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+                <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:text="αποκαλυψη ιωαννου"
+                    android:onClick="selectchapterfunction"
+                    android:tag="b66"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1" />
+
+            </androidx.gridlayout.widget.GridLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/selectchapterscrool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/selectchapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/bibletext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
