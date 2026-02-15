@@ -32,21 +32,17 @@ public class customworkermanager extends CoroutineWorker
         {
             try
             {
-                Boolean active = Hawk.get("active",false);
-                if(!(active))
+                JSONArray offlinestring = offlinegetter.notificationgetter(getApplicationContext());
+                if (offlinestring != null)
                 {
-                    JSONArray offlinestring = offlinegetter.notificationgetter(getApplicationContext());
-                    if (offlinestring != null)
+                    JSONObject qwe = offlinestring.getJSONObject((int) (Math.random() * offlinestring.length()));
+                    if(qwe.getInt("type") == 1)
                     {
-                        JSONObject qwe = offlinestring.getJSONObject((int) (Math.random() * offlinestring.length()));
-                        if(qwe.getInt("type") == 1)
-                        {
-                            notificationhelper.sendNotification(getApplicationContext(), qwe.getString("title"), qwe.getString("description"), qwe.getString("quotesource"),2);
-                        }
-                        else if (qwe.getInt("type") == 2)
-                        {
-                            notificationhelper.sendNotification(getApplicationContext(), qwe.getString("title"), qwe.getString("description"), qwe.getString("quotesource"),4);
-                        }
+                        notificationhelper.sendNotification(getApplicationContext(), qwe.getString("title"), qwe.getString("description"), qwe.getString("quotesource"),2);
+                    }
+                    else if (qwe.getInt("type") == 2)
+                    {
+                        notificationhelper.sendNotification(getApplicationContext(), qwe.getString("title"), qwe.getString("description"), qwe.getString("quotesource"),4);
                     }
                 }
             }

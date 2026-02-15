@@ -73,7 +73,7 @@
                     </FrameLayout>
 
                     <TextView
-                        android:text="Εισαγωγη"
+                        android:text="Εισαγωγή"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -1946,6 +1946,7 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/card2"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -2202,8 +2203,8 @@
                                 android:paddingBottom="10dp"
                                 android:scrollHorizontally="false"
                                 android:singleLine="true"
-                                android:text="Ξεκίνα"
-                                android:textColor="#000000"
+                                android:text="Η Εξέλιξη"
+                                android:textColor="#FFFFFF"
                                 android:textSize="20sp" />
 
                         </LinearLayout>
@@ -2211,6 +2212,436 @@
                     </LinearLayout>
 
                 </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/unlearncard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:background="#be7128"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/enochcardlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="206dp"
+                                android:src="@drawable/enoch"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/chip_view_selector_blue"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="15dp"
+                                android:paddingBottom="10dp"
+                                android:scrollHorizontally="false"
+                                android:singleLine="true"
+                                android:text="Το βιβλίο του Ενώχ"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enochlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"
+        android:visibility="gone"
+        tools:context="io.github.h_aliueia.LVideoFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/enochinlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:tag="enoch-1"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/day1_1"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Εισαγωγή"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-2"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/crossed_fingers"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ψέμα 1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-3"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/crossed_fingers"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ψέμα 2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-4"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/crossed_fingers"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ψέμα 3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-5"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/crossed_fingers"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ψέμα 4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-6"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circlegold"
+                            android:src="@drawable/crossed_fingers"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Ψέμα 5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-7"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/history"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Η Ιστορία των Βιβλίων"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-8"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/angels"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Δόγμα Αγγέλων"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-9"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/amazon"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Στατιστικά του Amazon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:tag="enoch-10"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:onClick="startvideogen"
+                    android:paddingBottom="150px"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:background="@drawable/circleblue"
+                            android:src="@drawable/end_call"
+                            android:layout_width="250px"
+                            android:layout_height="250px"
+                            android:padding="50px"/>
+
+                        <ImageView
+                            android:padding="50px"
+                            android:layout_width="250px"
+                            android:layout_height="250px"/>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:text="Eπίλογος"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 

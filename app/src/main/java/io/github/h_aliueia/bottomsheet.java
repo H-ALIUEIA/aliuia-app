@@ -23,7 +23,7 @@ public class bottomsheet extends BottomSheetDialogFragment
         View view = inflater.inflate(R.layout.bottomsheetlayout, container, false);
         TextView algoButton = view.findViewById(R.id.bottomsheetbutton1);
         algoButton.setOnClickListener(v -> {
-            String appPackageName = "com.the.truth";
+            String appPackageName = "io.github.h_aliueia";
             try
             {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));

@@ -15,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.viewbinding.ViewBinding;
 
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -59,10 +60,12 @@ public class LVideoFragment extends Fragment
     private FrameLayout learnprophecieslayout;
     private LinearLayout learnbiblelayout;
     private LinearLayout unlearnlayout;
+    private LinearLayout unlearn2layout;
     private LinearLayout levels;
     private MaterialCardView card1;
     private MaterialCardView card2;
     private MaterialCardView card3;
+    private MaterialCardView enoch;
     private int location = 0;
 
     public LinearLayout[] lessons = new LinearLayout[45];
@@ -104,6 +107,15 @@ public class LVideoFragment extends Fragment
         location = 4;
         selectorlayout.setVisibility(View.GONE);
         unlearnlayout.setVisibility(View.VISIBLE);
+        fabbutton();
+    }
+
+    public void unlearn2()
+    {
+        location = 5;
+        selectorlayout.setVisibility(View.GONE);
+        unlearnlayout.setVisibility(View.GONE);
+        unlearn2layout.setVisibility(View.VISIBLE);
         fabbutton();
     }
 
@@ -339,6 +351,10 @@ public class LVideoFragment extends Fragment
             g.setImageResource(R.drawable.baseline_apps_24);
         }
         else if(location == 4)
+        {
+            g.setImageResource(R.drawable.setting);
+        }
+        else if(location == 5)
         {
             g.setImageResource(R.drawable.setting);
         }
@@ -1481,6 +1497,7 @@ public class LVideoFragment extends Fragment
         learnprophecieslayout = (FrameLayout) rootView.findViewById(R.id.framelayout);
         learnbiblelayout = (LinearLayout) rootView.findViewById(R.id.learnbiblelayout);
         unlearnlayout = (LinearLayout) rootView.findViewById(R.id.unlearnlayout);
+        unlearn2layout = (LinearLayout) rootView.findViewById(R.id.enochlayout);
         levels = (LinearLayout) rootView.findViewById(R.id.levels);
         card1 = (MaterialCardView) rootView.findViewById(R.id.card);
         card1.setOnClickListener(new View.OnClickListener() {
@@ -1505,6 +1522,11 @@ public class LVideoFragment extends Fragment
                 unlearn();
             }
         });
+        enoch = (MaterialCardView) rootView.findViewById(R.id.unlearncard2);
+        enoch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { unlearn2(); }
+        });
         rootView.setFocusableInTouchMode(true);
         rootView.requestFocus();
         rootView.setOnKeyListener(new View.OnKeyListener()
@@ -1518,6 +1540,7 @@ public class LVideoFragment extends Fragment
                     {
                         location = 0;
                         unlearnlayout.setVisibility(View.GONE);
+                        unlearn2layout.setVisibility(View.GONE);
                         learnbiblelayout.setVisibility(View.GONE);
                         learnprophecieslayout.setVisibility(View.GONE);
                         selectorlayout.setVisibility(View.VISIBLE);
@@ -1537,11 +1560,24 @@ public class LVideoFragment extends Fragment
                     {
                         location = 0;
                         unlearnlayout.setVisibility(View.GONE);
+                        unlearn2layout.setVisibility(View.GONE);
                         learnbiblelayout.setVisibility(View.GONE);
                         learnprophecieslayout.setVisibility(View.GONE);
                         selectorlayout.setVisibility(View.VISIBLE);
                         prophecydayindicator();
                         levelindicator();
+                        fabbutton();
+                        pressed = 0;
+                        return true;
+                    }
+                    else if(location == 5)
+                    {
+                        location = 4;
+                        unlearnlayout.setVisibility(View.VISIBLE);
+                        unlearn2layout.setVisibility(View.GONE);
+                        learnbiblelayout.setVisibility(View.GONE);
+                        learnprophecieslayout.setVisibility(View.GONE);
+                        selectorlayout.setVisibility(View.GONE);
                         fabbutton();
                         pressed = 0;
                         return true;

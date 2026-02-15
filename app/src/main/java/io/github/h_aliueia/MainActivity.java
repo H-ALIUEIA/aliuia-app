@@ -91,11 +91,19 @@ public class MainActivity extends AppCompatActivity
         });
         EdgeToEdge.enable(this);
         setContentView(binding.getRoot());
+        SharedPreferences settings = getSharedPreferences("first-time",0);
+        boolean firsttime = settings.getBoolean("first-time", true);
+        if(firsttime)
+        {
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putBoolean("first-time", false);
+            editor.apply();
+            startActivity(new Intent(MainActivity.this, tutorial.class));
+        }
         replaceFramgment(new NewsFragment());
         binding.bottomNavigationView.setBackground(null);
         binding.bottomNavigationView.getMenu().getItem(2).setEnabled(false);
         Hawk.init(this).build();
-        getLifecycle().addObserver(new workerobserver());
         frgtoloadfun();
         try
         {
@@ -318,7 +326,7 @@ public class MainActivity extends AppCompatActivity
                         reader.close();
                     }
                 }
-                catch (IOException e){}
+                catch (Exception e){pressed = 0;}
             }
             return null;
         }
@@ -354,10 +362,20 @@ public class MainActivity extends AppCompatActivity
                     pressed = 0;
                 }
             }
-            catch (Exception e){}
+            catch (Exception e){pressed = 0;}
         }
     }
 
+    public void startvideogen(View view)
+    {
+        if(pressed == 0)
+        {
+            pressed = 1;
+            String buttontag = view.getTag().toString();
+            String[] buttontags = buttontag.split("-");
+            new unlearnjson().execute(getResources().getString(R.string.server) + "/api/unlearn/"+String.valueOf(Integer.parseInt(buttontags[1])+1));
+        }
+    }
 
     public void startvideo(View view)
     {
