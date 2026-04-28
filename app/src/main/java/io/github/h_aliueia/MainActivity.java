@@ -25,6 +25,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
@@ -377,6 +378,59 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    public void loadarticlefragment(String article)
+    {
+        Bundle bundle = new Bundle();
+        bundle.putString("key", article);
+        IndividualArticle indi = new IndividualArticle();
+        indi.setArguments(bundle);
+        replaceFramgment(indi);
+    }
+
+    public void fragmentreplacerfromfrag(int posi)
+    {
+        if(posi == 1)
+        {
+            replaceFramgment(new LVideoFragment());
+        }
+        else if(posi == 2)
+        {
+            replaceFramgment(new LVideoFragment());
+        }
+        else if(posi == 3)
+        {
+            replaceFramgment(new Unlearn());
+        }
+        else if(posi == 4)
+        {
+            replaceFramgment(new Unlearn());
+        }
+        else if(posi == 5)
+        {
+            replaceFramgment(new NewsFragment());
+        }
+    }
+    public void fragmentreplacer(View view)
+    {
+        String buttontag = view.getTag().toString();
+        if(buttontag.equals("prophecies"))
+        {
+            replaceFramgment(new Prophecies());
+        }
+        else if (buttontag.equals("unlearn"))
+        {
+            replaceFramgment(new Unlearn());
+        }
+        else if (buttontag.equals("enoch"))
+        {
+            replaceFramgment(new Enoch());
+        }
+        else if (buttontag.equals("islam"))
+        {
+            replaceFramgment(new Islam());
+        }
+    }
+
     public void startvideo(View view)
     {
         if (pressed == 0)
@@ -722,6 +776,10 @@ public class MainActivity extends AppCompatActivity
         else if (fragment5 != null && fragment.equals(fragment5))
         {
             binding.bottomNavigationView.getMenu().getItem(4).setChecked(true);
+        }
+        else
+        {
+            binding.bottomNavigationView.getMenu().getItem(0).setChecked(true);
         }
     }
 }
