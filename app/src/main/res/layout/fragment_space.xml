@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    android:layout_marginTop="?attr/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nasa_article"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/nasa_icon"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="10 Αλήθειες για την ΝΑΣΑ\nπου οι Χριστιανοί Τελείως Αγνοούν"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="space-26"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/changed_history"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Εισαγωγή\n&amp;\nΑλλαγμένη Ιστορία"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="space-27"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/nasa_icon"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Ψέματα της ΝΑΣΑ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="space-28"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/army_icon"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Αμερικάνικος Στρατός"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="space-29"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/flat_proof"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Η Επίπεδη Γη Είναι Ψέμα"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="space-30"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/ufo"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Το Μεγάλο Ψέμα"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="space-31"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/ufo"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Ψεύτικη Εξωγήινη Εισβολή"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

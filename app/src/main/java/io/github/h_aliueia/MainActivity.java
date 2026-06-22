@@ -409,6 +409,14 @@ public class MainActivity extends AppCompatActivity
         {
             replaceFramgment(new NewsFragment());
         }
+        else if(posi == 6)
+        {
+            replaceFramgment(new Unlearn());
+        }
+        else if(posi == 7)
+        {
+            replaceFramgment(new Unlearn2());
+        }
     }
     public void fragmentreplacer(View view)
     {
@@ -421,6 +429,10 @@ public class MainActivity extends AppCompatActivity
         {
             replaceFramgment(new Unlearn());
         }
+        else if (buttontag.equals("unlearn2"))
+        {
+            replaceFramgment(new Unlearn2());
+        }
         else if (buttontag.equals("enoch"))
         {
             replaceFramgment(new Enoch());
@@ -428,6 +440,18 @@ public class MainActivity extends AppCompatActivity
         else if (buttontag.equals("islam"))
         {
             replaceFramgment(new Islam());
+        }
+        else if (buttontag.equals("space"))
+        {
+            replaceFramgment(new Space());
+        }
+        else if (buttontag.equals("dino"))
+        {
+            replaceFramgment(new Dino());
+        }
+        else if (buttontag.equals("climate"))
+        {
+            replaceFramgment(new Climate());
         }
     }
 
@@ -761,6 +785,11 @@ public class MainActivity extends AppCompatActivity
         QuotesFragment fragment2 = (QuotesFragment) getSupportFragmentManager().findFragmentByTag("QuotesFragment");
         ShortsFragment fragment4 = (ShortsFragment) getSupportFragmentManager().findFragmentByTag("ShortsFragment");
         LVideoFragment fragment5 = (LVideoFragment) getSupportFragmentManager().findFragmentByTag("LVideoFragment");
+        Enoch fragment6 = (Enoch) getSupportFragmentManager().findFragmentByTag("Enoch");
+        Islam fragment7 = (Islam) getSupportFragmentManager().findFragmentByTag("Islam");
+        Prophecies fragment8 = (Prophecies) getSupportFragmentManager().findFragmentByTag("Prophecies");
+        Space fragment9 = (Space) getSupportFragmentManager().findFragmentByTag("Space");
+        Unlearn fragment10 = (Unlearn) getSupportFragmentManager().findFragmentByTag("Unlearn");
         if (fragment1 != null && fragment.equals(fragment1))
         {
             binding.bottomNavigationView.getMenu().getItem(0).setChecked(true);
@@ -774,6 +803,26 @@ public class MainActivity extends AppCompatActivity
             binding.bottomNavigationView.getMenu().getItem(3).setChecked(true);
         }
         else if (fragment5 != null && fragment.equals(fragment5))
+        {
+            binding.bottomNavigationView.getMenu().getItem(4).setChecked(true);
+        }
+        else if (fragment6 != null && fragment.equals(fragment6))
+        {
+            binding.bottomNavigationView.getMenu().getItem(4).setChecked(true);
+        }
+        else if (fragment7 != null && fragment.equals(fragment7))
+        {
+            binding.bottomNavigationView.getMenu().getItem(4).setChecked(true);
+        }
+        else if (fragment8 != null && fragment.equals(fragment8))
+        {
+            binding.bottomNavigationView.getMenu().getItem(4).setChecked(true);
+        }
+        else if (fragment9 != null && fragment.equals(fragment9))
+        {
+            binding.bottomNavigationView.getMenu().getItem(4).setChecked(true);
+        }
+        else if (fragment10 != null && fragment.equals(fragment10))
         {
             binding.bottomNavigationView.getMenu().getItem(4).setChecked(true);
         }

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    android:layout_marginTop="?attr/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:tag="dino-17"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/lies_icon"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Ιστορία και Ψέματα"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="dino-18"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circlered"
+                        android:src="@drawable/bones"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Τα Κόκαλα"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="dino-19"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/motive"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Τα κίνητρα"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="dino-20"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circlered"
+                        android:src="@drawable/dino_evolution"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Ψέματα\nΣύνδεσης με την Εξέλιξη"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="dino-21"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/end_call"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Επίλογος"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

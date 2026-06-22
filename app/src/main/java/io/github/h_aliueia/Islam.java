@@ -61,7 +61,7 @@ public class Islam extends Fragment
             {
                 if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK)
                 {
-                    ((MainActivity)getActivity()).fragmentreplacerfromfrag(4);
+                    ((MainActivity)getActivity()).fragmentreplacerfromfrag(7);
                     return true;
                 }
                 else
