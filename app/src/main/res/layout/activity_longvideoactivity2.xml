@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="io.github.h_aliueia.longvideoactivity">
+
+    <androidx.media3.ui.PlayerView
+        app:hide_on_touch="true"
+        android:background="#000000"
+        app:resize_mode="fill"
+        app:show_timeout="4000"
+        app:shutter_background_color="#000000"
+        app:surface_type="surface_view"
+        app:use_controller="true"
+        app:controller_layout_id="@layout/prophecycontroller"
+        android:id="@+id/longvideoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -39,6 +39,12 @@
             android:screenOrientation="sensorLandscape"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
+            android:name=".longvideoactivity2"
+            android:configChanges="orientation"
+            android:exported="false"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
             android:name=".MainActivity3"
             android:exported="false"
             android:parentActivityName=".MainActivity" />

@@ -367,6 +367,93 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    public class prepjson extends AsyncTask<String, String, String>
+    {
+        protected void onPreExecute()
+        {
+            super.onPreExecute();
+        }
+
+        protected String doInBackground(String... params)
+        {
+            HttpURLConnection connection = null;
+            BufferedReader reader = null;
+
+            try
+            {
+                SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
+                URL url = new URL(params[0]);
+                connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestProperty("accept", "application/json");
+                connection.connect();
+                InputStream stream = connection.getInputStream();
+                reader = new BufferedReader(new InputStreamReader(stream));
+                StringBuffer buffer = new StringBuffer();
+                String line = "";
+                while ((line = reader.readLine()) != null)
+                {
+                    buffer.append(line + "\n");
+                }
+                return buffer.toString();
+            }
+            catch (Exception e)
+            {
+                if(offlinegetter.offlinechecker(MainActivity.this,0))
+                {
+                    return params[0];
+                }
+            }
+            finally
+            {
+                if(connection != null)
+                {
+                    connection.disconnect();
+                }
+                try
+                {
+                    if(reader != null)
+                    {
+                        reader.close();
+                    }
+                }
+                catch (Exception e){pressed = 0;}
+            }
+            return null;
+        }
+
+        protected void onPostExecute(String result)
+        {
+            super.onPostExecute(result);
+            sorter(result);
+        }
+
+        public void sorter(String jso)
+        {
+            try
+            {
+                SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
+                if(!(offlinegetter.offlinechecker(MainActivity.this,4)))
+                {
+                    JSONArray obj = new JSONArray(jso);
+                    JSONObject obj2 = (JSONObject) obj.get(0);
+                    String videourl = obj2.getString("videourl");
+                    Intent myIntent = new Intent(MainActivity.this, longvideoactivity2.class);
+                    myIntent.putExtra("link", videourl);
+                    startActivity(myIntent);
+                    pressed = 0;
+                }
+                else
+                {
+                    Intent myIntent = new Intent(MainActivity.this, longvideoactivity2.class);
+                    myIntent.putExtra("link", getApplicationInfo().dataDir+"/files/unlearn/unlearn"+jso.substring(jso.length() - 1)+".mp4");
+                    startActivity(myIntent);
+                    pressed = 0;
+                }
+            }
+            catch (Exception e){pressed = 0;}
+        }
+    }
+
     public void startvideogen(View view)
     {
         if(pressed == 0)
@@ -375,6 +462,24 @@ public class MainActivity extends AppCompatActivity
             String buttontag = view.getTag().toString();
             String[] buttontags = buttontag.split("-");
             new unlearnjson().execute(getResources().getString(R.string.server) + "/api/unlearn/"+String.valueOf(Integer.parseInt(buttontags[1])+1));
+        }
+    }
+
+    public void startvideogen2(View view)
+    {
+        if(pressed == 0)
+        {
+            pressed = 1;
+            String buttontag = view.getTag().toString();
+            String[] buttontags = buttontag.split("-");
+            if(Integer.parseInt(buttontags[1]) == 1)
+            {
+                new unlearnjson().execute(getResources().getString(R.string.server) + "/api/prep/"+String.valueOf(Integer.parseInt(buttontags[1])));
+            }
+            else
+            {
+                new prepjson().execute(getResources().getString(R.string.server) + "/api/prep/"+String.valueOf(Integer.parseInt(buttontags[1])));
+            }
         }
     }
 
@@ -452,6 +557,10 @@ public class MainActivity extends AppCompatActivity
         else if (buttontag.equals("climate"))
         {
             replaceFramgment(new Climate());
+        }
+        else if (buttontag.equals("prep"))
+        {
+            replaceFramgment(new Prep());
         }
     }
 

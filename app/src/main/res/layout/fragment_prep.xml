@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    android:layout_marginTop="?attr/actionBarSize"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:tag="prep-1"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day1_1"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Εισαγωγή"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="prep-2"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/prep_2"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Τρία Κομμάτια της Σωτηρίας"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="prep-3"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day1_1"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Η Εικόνα του Θεού"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="prep-4"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day3_6"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Τι Ακριβός Έκανε ο Χριστός στον Σταυρό?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="prep-5"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day1_5"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Πότε ακριβός σωζόμαστε?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="prep-6"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day1_1"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Ο Ναός Του Θεού"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:tag="prep-7"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day7_1"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Πνευματικός Πόλεμος"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-8"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day7_4"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Συνέπειες της Αμαρτίας"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-9"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/prep_9"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Ζωντανό Nερό"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-10"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day1_5"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Θεραπεύοντας την Ψυχή"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-11"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day3_5"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Δεν Χρειάζεσαι Περισσότερη Πίστη"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-12"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/prep_12"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Διγνωμία"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-13"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day7_5"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Χρήματα"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-14"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day3_5"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Οδηγίες Για Αγιοποίηση"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-15"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/day5_2"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Σωματική Προετοιμασία και Πόλεις"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-16"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/army_icon"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Σωματική Προετοιμασία (Τα Βασικά)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-17"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/army_icon"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Σωματική Προετοιμασία (Γενικά)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:tag="prep-18"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:onClick="startvideogen2"
+                android:paddingBottom="150px"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:background="@drawable/circleblue"
+                        android:src="@drawable/prep_18"
+                        android:layout_width="250px"
+                        android:layout_height="250px"
+                        android:padding="50px"/>
+
+                    <ImageView
+                        android:padding="50px"
+                        android:layout_width="250px"
+                        android:layout_height="250px"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:text="Πώρωση της καρδιάς"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
