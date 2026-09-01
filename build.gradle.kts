@@ -11,3 +11,4 @@ plugins {
     id("org.jetbrains.kotlin.android") version "2.2.0" apply false
     id("com.android.library") version "8.11.1" apply false
 }
+val defaultTargetSdkVersion by extra(36)
