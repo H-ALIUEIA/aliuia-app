@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +63,7 @@ public class Settings extends AppCompatActivity
     public PopupMenu lessonspopup;
     public PopupMenu prophecypopup;
     public PopupMenu unlearnpopup;
+    public PopupMenu preppopup;
 
     public int getStatusBarHeight()
     {
@@ -143,6 +145,15 @@ public class Settings extends AppCompatActivity
             public void onClick(View view)
             {
                 unlearnpopup.show();
+            }
+        });
+        LinearLayout prepbutton = (LinearLayout) findViewById(R.id.prepbutton);
+        prepbutton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                preppopup.show();
             }
         });
     }
@@ -404,6 +415,60 @@ public class Settings extends AppCompatActivity
                 public boolean onMenuItemClick(MenuItem item)
                 {
                     pre_download_unlearnvideos();
+                    return true;
+                }
+            });
+        }
+        if(offlinegetter.offlinechecker(Settings.this,5))
+        {
+            preppopup = null;
+            TextView prepellipsi = (TextView) findViewById(R.id.prepellipsi);
+            preppopup = new PopupMenu(Settings.this, prepellipsi);
+            preppopup.getMenuInflater().inflate(R.menu.offline_listitem_menu, preppopup.getMenu());
+            preppopup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener()
+            {
+                public boolean onMenuItemClick(MenuItem item)
+                {
+                    int id = item.getItemId();
+                    if(id == R.id.update)
+                    {
+                        File file = new File(getApplicationInfo().dataDir+"/files/prep.zip");
+                        if(file.exists())
+                        {
+                            file.delete();
+                        }
+                        pre_download_prepvideos();
+                    }
+                    else if(id == R.id.delete)
+                    {
+                        File file = new File(getApplicationInfo().dataDir+"/files/prep.zip");
+                        if(file.exists())
+                        {
+                            file.delete();
+                        }
+                        file = new File(getApplicationInfo().dataDir+"/files/prep/");
+                        if(file.exists())
+                        {
+                            FilesKt.deleteRecursively(new File(getApplicationInfo().dataDir + "/files/prep"));
+                        }
+                        databasepopup = null;
+                        checker();
+                    }
+                    return true;
+                }
+            });
+        }
+        else
+        {
+            preppopup = null;
+            TextView prepellipsi = (TextView) findViewById(R.id.prepellipsi);
+            preppopup = new PopupMenu(Settings.this, prepellipsi);
+            preppopup.getMenuInflater().inflate(R.menu.online_listitem_menu, preppopup.getMenu());
+            preppopup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener()
+            {
+                public boolean onMenuItemClick(MenuItem item)
+                {
+                    pre_download_prepvideos();
                     return true;
                 }
             });
@@ -796,6 +861,110 @@ public class Settings extends AppCompatActivity
         });
     }
 
+    public void download_prepvideos()
+    {
+        final Request request = new Request(getResources().getString(R.string.storageserver)+"/prep.zip", getApplicationInfo().dataDir+"/files/prep.zip");
+        request.setPriority(Priority.HIGH);
+        request.setNetworkType(NetworkType.ALL);
+        FetchListener fetchListener = new FetchListener() {
+            @Override
+            public void onStarted(@NonNull Download download, @NonNull List<? extends DownloadBlock> list, int i)
+            {
+                dialoger = new PleaseWaitDialog(Settings.this);
+                dialoger.setProgressStyle(PleaseWaitDialog.ProgressStyle.BOTH);
+                dialoger.setIndeterminate(PleaseWaitDialog.ProgressStyle.LINEAR,false);
+                dialoger.setIndeterminate(PleaseWaitDialog.ProgressStyle.CIRCULAR,true);
+                dialoger.setCancelable(false);
+                dialoger.show();
+            }
+
+            @Override
+            public void onDownloadBlockUpdated(@NonNull Download download, @NonNull DownloadBlock downloadBlock, int i)
+            {
+
+            }
+
+            @Override
+            public void onError(@NonNull Download download, @NonNull com.tonyodev.fetch2.Error error, @Nullable Throwable throwable)
+            {
+
+            }
+
+            @Override
+            public void onWaitingNetwork(@NonNull Download download)
+            {
+
+            }
+
+            @Override
+            public void onAdded(@NonNull Download download)
+            {
+
+            }
+
+            @Override
+            public void onQueued(@NotNull Download download, boolean waitingOnNetwork) {
+                if (request.getId() == download.getId()) {
+
+                }
+            }
+
+            @Override
+            public void onCompleted(@NotNull Download download)
+            {
+                try
+                {
+                    MyTaskParams myTaskParams = new MyTaskParams("prep.zip","","prep");
+                    new json3().execute(myTaskParams);
+                }
+                catch (Exception e){}
+            }
+
+            @Override
+            public void onProgress(@NotNull Download download, long etaInMilliSeconds, long downloadedBytesPerSecond) {
+                if (request.getId() == download.getId())
+                {
+                    dialoger.setProgress((int)download.getProgress());
+                }
+            }
+
+            @Override
+            public void onPaused(@NotNull Download download)
+            {
+
+            }
+
+            @Override
+            public void onResumed(@NotNull Download download) {
+
+            }
+
+            @Override
+            public void onCancelled(@NotNull Download download)
+            {
+
+            }
+
+            @Override
+            public void onRemoved(@NotNull Download download)
+            {
+
+            }
+
+            @Override
+            public void onDeleted(@NotNull Download download)
+            {
+
+            }
+        };
+        fetch.addListener(fetchListener);
+        fetch.enqueue(request, updatedRequest -> {
+            //Request was successfully enqueued for download.
+        }, error -> {
+
+        });
+    }
+
     public void download_prophecyvideos()
     {
         final Request request = new Request(getResources().getString(R.string.storageserver)+"/prophecy.zip", getApplicationInfo().dataDir+"/files/prophecy.zip");
@@ -962,6 +1131,37 @@ public class Settings extends AppCompatActivity
         builder.setMessage("Θέλετε να κατεβάσετε τα ξέμαθε?").setPositiveButton("Ναι", dialogClickListener).setNegativeButton("Όχι", dialogClickListener).show();
     }
 
+    public void pre_download_prepvideos()
+    {
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                switch (which)
+                {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        if(offlinegetter.offlinechecker(Settings.this,0))
+                        {
+                            download_prepvideos();
+                            break;
+                        }
+                        else
+                        {
+                            MyTaskParams myTaskParams = new MyTaskParams(getResources().getString(R.string.server) + "/api/download/db", "offlinedb.json", "donot4");
+                            new json().execute(myTaskParams);
+                            break;
+                        }
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        break;
+                }
+            }
+        };
+        AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
+        builder.setMessage("Θέλετε να κατεβάσετε τις προετοιμασίες?").setPositiveButton("Ναι", dialogClickListener).setNegativeButton("Όχι", dialogClickListener).show();
+    }
+
     public class json3 extends AsyncTask<MyTaskParams, String, String>
     {
         protected void onPreExecute()
@@ -970,6 +1170,7 @@ public class Settings extends AppCompatActivity
             dialoger = new PleaseWaitDialog(Settings.this);
             dialoger.setProgressStyle(PleaseWaitDialog.ProgressStyle.CIRCULAR);
             dialoger.setIndeterminate(true);
+            dialoger.setCancelable(false);
             dialoger.show();
             super.onPreExecute();
         }

@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -54,6 +55,7 @@ public class longvideoactivity extends AppCompatActivity
 
     public int currentlesson = 0;
     public Boolean mode = true;
+    public Boolean onoff = true;
 
     @UnstableApi
     @Override
@@ -69,6 +71,7 @@ public class longvideoactivity extends AppCompatActivity
         try
         {
             link = getIntent().getExtras().getString("link");
+            onoff = getIntent().getExtras().getBoolean("onoff", true);
             mode = getIntent().getExtras().getBoolean("mode", true);
             if(mode)
             {
@@ -101,22 +104,24 @@ public class longvideoactivity extends AppCompatActivity
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
         if(mode)
         {
-            if(!(offlinegetter.offlinechecker(longvideoactivity.this,3)))
+            if(onoff)
             {
                 MediaSource mediaSource = new HlsMediaSource.Factory(cacheDataSourceFactory).createMediaSource(mediaItem);
                 exoPlayer.setMediaSource(mediaSource);
-            } else
+            }
+            else
             {
                 exoPlayer.setMediaItem(mediaItem);
             }
         }
         else
         {
-            if(!(offlinegetter.offlinechecker(longvideoactivity.this,4)))
+            if(onoff)
             {
                 MediaSource mediaSource = new HlsMediaSource.Factory(cacheDataSourceFactory).createMediaSource(mediaItem);
                 exoPlayer.setMediaSource(mediaSource);
-            } else
+            }
+            else
             {
                 exoPlayer.setMediaItem(mediaItem);
             }
@@ -316,7 +321,7 @@ public class longvideoactivity extends AppCompatActivity
         {
             super.onPostExecute(result);
             SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
-            if(!(offlinegetter.offlinechecker(longvideoactivity.this,3)))
+            if(onoff)
             {
                 int firstslash = result.indexOf("/");
                 int secondslash = result.substring(firstslash + 1, result.length()).indexOf("/") + firstslash + 1;
@@ -339,7 +344,7 @@ public class longvideoactivity extends AppCompatActivity
             try
             {
                 SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
-                if(!(offlinegetter.offlinechecker(longvideoactivity.this,3)))
+                if(onoff)
                 {
                     JSONArray obj = new JSONArray(jso);
                     for (int i = 0; i < obj.length(); i++)

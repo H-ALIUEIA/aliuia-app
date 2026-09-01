@@ -10,9 +10,9 @@ android {
     defaultConfig {
         applicationId = "io.github.h_aliueia"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 11
-        versionName = "11.0"
+        targetSdk = 36
+        versionCode = 12
+        versionName = "12.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     buildFeatures{

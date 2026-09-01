@@ -130,6 +130,7 @@
     </LinearLayout>
 
     <View
+        android:visibility="gone"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_width="match_parent"
@@ -137,6 +138,7 @@
         android:background="?android:attr/listDivider"/>
 
     <LinearLayout
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         android:id="@+id/lessonsbutton"
         android:gravity="center"
@@ -234,6 +236,60 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/prepbutton"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/army_icon_blue"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="ΠΡΟΕΤΟΙΜΑΣΙΑ"/>
+
+        <LinearLayout
+            android:gravity="right"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginEnd="20dp"
+                android:id="@+id/prepellipsi"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/vertical_ellipsis" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
     <View
         android:layout_marginLeft="15dp"

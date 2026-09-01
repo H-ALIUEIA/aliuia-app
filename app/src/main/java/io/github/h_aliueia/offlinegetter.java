@@ -79,6 +79,19 @@ public class offlinegetter
                 return false;
             }
         }
+        else if(type == 5)
+        {
+            File file = new File(context.getApplicationInfo().dataDir+"/files/prep/");
+            File file2 = new File(context.getApplicationInfo().dataDir+"/files/prep.zip");
+            if(file.exists() || file2.exists())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         else
         {
             return false;

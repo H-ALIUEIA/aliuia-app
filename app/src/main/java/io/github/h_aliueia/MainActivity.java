@@ -39,6 +39,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -259,6 +260,7 @@ public class MainActivity extends AppCompatActivity
                             myIntent.putExtra("link", videourl);
                             myIntent.putExtra("part", part);
                             myIntent.putExtra("book", book);
+                            myIntent.putExtra("onoff", true);
                             startActivity(myIntent);
                             pressed = 0;
                         }
@@ -270,6 +272,7 @@ public class MainActivity extends AppCompatActivity
                     myIntent.putExtra("link", getApplicationInfo().dataDir+"/files/prophecy/day"+book+"/part"+part+".mp4");
                     myIntent.putExtra("part", part);
                     myIntent.putExtra("book", book);
+                    myIntent.putExtra("onoff", false);
                     startActivity(myIntent);
                     pressed = 0;
                 }
@@ -292,20 +295,29 @@ public class MainActivity extends AppCompatActivity
 
             try
             {
-                SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
-                URL url = new URL(params[0]);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestProperty("accept", "application/json");
-                connection.connect();
-                InputStream stream = connection.getInputStream();
-                reader = new BufferedReader(new InputStreamReader(stream));
-                StringBuffer buffer = new StringBuffer();
-                String line = "";
-                while ((line = reader.readLine()) != null)
+                if(!(offlinegetter.offlinechecker(MainActivity.this,4)))
                 {
-                    buffer.append(line + "\n");
+                    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
+                    URL url = new URL(params[0]);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestProperty("accept", "application/json");
+                    connection.connect();
+                    InputStream stream = connection.getInputStream();
+                    reader = new BufferedReader(new InputStreamReader(stream));
+                    StringBuffer buffer = new StringBuffer();
+                    String line = "";
+                    while ((line = reader.readLine()) != null) {
+                        buffer.append(line + "\n");
+                    }
+                    return buffer.toString();
                 }
-                return buffer.toString();
+                else
+                {
+                    if(offlinegetter.offlinechecker(MainActivity.this,0))
+                    {
+                        return params[0];
+                    }
+                }
             }
             catch (Exception e)
             {
@@ -351,14 +363,115 @@ public class MainActivity extends AppCompatActivity
                     Intent myIntent = new Intent(MainActivity.this, longvideoactivity.class);
                     myIntent.putExtra("link", videourl);
                     myIntent.putExtra("mode", false);
+                    myIntent.putExtra("onoff", true);
                     startActivity(myIntent);
                     pressed = 0;
                 }
                 else
                 {
                     Intent myIntent = new Intent(MainActivity.this, longvideoactivity.class);
-                    myIntent.putExtra("link", getApplicationInfo().dataDir+"/files/unlearn/unlearn"+jso.substring(jso.length() - 1)+".mp4");
+                    myIntent.putExtra("link", getApplicationInfo().dataDir+"/files/unlearn/unlearn"+jso.substring(jso.lastIndexOf("/")+1)+".mp4");
                     myIntent.putExtra("mode", false);
+                    myIntent.putExtra("onoff", false);
+                    startActivity(myIntent);
+                    pressed = 0;
+                }
+            }
+            catch (Exception e){pressed = 0;}
+        }
+    }
+
+    public class prepjson2 extends AsyncTask<String, String, String>
+    {
+        protected void onPreExecute()
+        {
+            super.onPreExecute();
+        }
+
+        protected String doInBackground(String... params)
+        {
+            HttpURLConnection connection = null;
+            BufferedReader reader = null;
+
+            try
+            {
+                if(!(offlinegetter.offlinechecker(MainActivity.this,5)))
+                {
+                    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
+                    URL url = new URL(params[0]);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestProperty("accept", "application/json");
+                    connection.connect();
+                    InputStream stream = connection.getInputStream();
+                    reader = new BufferedReader(new InputStreamReader(stream));
+                    StringBuffer buffer = new StringBuffer();
+                    String line = "";
+                    while ((line = reader.readLine()) != null) {
+                        buffer.append(line + "\n");
+                    }
+                    return buffer.toString();
+                }
+                else
+                {
+                    if(offlinegetter.offlinechecker(MainActivity.this,0))
+                    {
+                        return params[0];
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                if(offlinegetter.offlinechecker(MainActivity.this,0))
+                {
+                    return params[0];
+                }
+            }
+            finally
+            {
+                if(connection != null)
+                {
+                    connection.disconnect();
+                }
+                try
+                {
+                    if(reader != null)
+                    {
+                        reader.close();
+                    }
+                }
+                catch (Exception e){pressed = 0;}
+            }
+            return null;
+        }
+
+        protected void onPostExecute(String result)
+        {
+            super.onPostExecute(result);
+            sorter(result);
+        }
+
+        public void sorter(String jso)
+        {
+            try
+            {
+                SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
+                if(!(offlinegetter.offlinechecker(MainActivity.this,5)))
+                {
+                    JSONArray obj = new JSONArray(jso);
+                    JSONObject obj2 = (JSONObject) obj.get(0);
+                    String videourl = obj2.getString("videourl");
+                    Intent myIntent = new Intent(MainActivity.this, longvideoactivity.class);
+                    myIntent.putExtra("link", videourl);
+                    myIntent.putExtra("onoff", true);
+                    startActivity(myIntent);
+                    pressed = 0;
+                }
+                else
+                {
+                    Intent myIntent = new Intent(MainActivity.this, longvideoactivity.class);
+                    myIntent.putExtra("link", getApplicationInfo().dataDir+"/files/prep/prep"+jso.substring(jso.lastIndexOf("/")+1)+".mp4");
+                    myIntent.putExtra("mode", false);
+                    myIntent.putExtra("onoff", false);
                     startActivity(myIntent);
                     pressed = 0;
                 }
@@ -381,20 +494,30 @@ public class MainActivity extends AppCompatActivity
 
             try
             {
-                SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
-                URL url = new URL(params[0]);
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestProperty("accept", "application/json");
-                connection.connect();
-                InputStream stream = connection.getInputStream();
-                reader = new BufferedReader(new InputStreamReader(stream));
-                StringBuffer buffer = new StringBuffer();
-                String line = "";
-                while ((line = reader.readLine()) != null)
+                if(!(offlinegetter.offlinechecker(MainActivity.this,5)))
                 {
-                    buffer.append(line + "\n");
+                    SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
+                    URL url = new URL(params[0]);
+                    connection = (HttpURLConnection) url.openConnection();
+                    connection.setRequestProperty("accept", "application/json");
+                    connection.connect();
+                    InputStream stream = connection.getInputStream();
+                    reader = new BufferedReader(new InputStreamReader(stream));
+                    StringBuffer buffer = new StringBuffer();
+                    String line = "";
+                    while ((line = reader.readLine()) != null)
+                    {
+                        buffer.append(line + "\n");
+                    }
+                    return buffer.toString();
                 }
-                return buffer.toString();
+                else
+                {
+                    if(offlinegetter.offlinechecker(MainActivity.this,0))
+                    {
+                        return params[0];
+                    }
+                }
             }
             catch (Exception e)
             {
@@ -432,20 +555,23 @@ public class MainActivity extends AppCompatActivity
             try
             {
                 SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
-                if(!(offlinegetter.offlinechecker(MainActivity.this,4)))
+                if(!(offlinegetter.offlinechecker(MainActivity.this,5)))
                 {
                     JSONArray obj = new JSONArray(jso);
                     JSONObject obj2 = (JSONObject) obj.get(0);
                     String videourl = obj2.getString("videourl");
                     Intent myIntent = new Intent(MainActivity.this, longvideoactivity2.class);
                     myIntent.putExtra("link", videourl);
+                    myIntent.putExtra("onoff", true);
                     startActivity(myIntent);
                     pressed = 0;
                 }
                 else
                 {
                     Intent myIntent = new Intent(MainActivity.this, longvideoactivity2.class);
-                    myIntent.putExtra("link", getApplicationInfo().dataDir+"/files/unlearn/unlearn"+jso.substring(jso.length() - 1)+".mp4");
+                    myIntent.putExtra("link", getApplicationInfo().dataDir+"/files/prep/prep"+jso.substring(jso.lastIndexOf("/")+1)+".mp4");
+                    myIntent.putExtra("mode", false);
+                    myIntent.putExtra("onoff", false);
                     startActivity(myIntent);
                     pressed = 0;
                 }
@@ -474,7 +600,7 @@ public class MainActivity extends AppCompatActivity
             String[] buttontags = buttontag.split("-");
             if(Integer.parseInt(buttontags[1]) == 1)
             {
-                new unlearnjson().execute(getResources().getString(R.string.server) + "/api/prep/"+String.valueOf(Integer.parseInt(buttontags[1])));
+                new prepjson2().execute(getResources().getString(R.string.server) + "/api/prep/"+String.valueOf(Integer.parseInt(buttontags[1])));
             }
             else
             {

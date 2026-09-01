@@ -46,10 +46,7 @@ public class longvideoactivity2 extends AppCompatActivity
     public PlayerView longvideoview;
     @SuppressLint("UnsafeOptInUsageError")
     private CacheDataSource.Factory cacheDataSourceFactory;
-    public int bookglo;
-    public int partglo;
-    public int nexbookglo;
-    public int nexpartglo;
+    public Boolean onoff = true;
 
     @UnstableApi
     @Override
@@ -65,6 +62,7 @@ public class longvideoactivity2 extends AppCompatActivity
         try
         {
             link = getIntent().getExtras().getString("link");
+            onoff = getIntent().getExtras().getBoolean("onoff", true);
         }
         catch (Exception e)
         {
@@ -77,11 +75,12 @@ public class longvideoactivity2 extends AppCompatActivity
         Uri uri = Uri.parse(link);
         MediaItem mediaItem = MediaItem.fromUri(uri);
         SharedPreferences sharedPref = getSharedPreferences(getString(R.string.localstorage), Context.MODE_PRIVATE);
-        if(!(offlinegetter.offlinechecker(longvideoactivity2.this,4)))
+        if(onoff)
         {
             MediaSource mediaSource = new HlsMediaSource.Factory(cacheDataSourceFactory).createMediaSource(mediaItem);
             exoPlayer.setMediaSource(mediaSource);
-        } else
+        }
+        else
         {
             exoPlayer.setMediaItem(mediaItem);
         }
